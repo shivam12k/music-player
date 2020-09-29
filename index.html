@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Music player</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="animation.css"> -->
+    <link rel="stylesheet" href="waves.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/0774f60bd6.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+
+        <div id="particles-js">
+        </div>
+        <div class="music-box">
+
+
+
+            <div class="album" id="loading"></div>
+            <!-- <div class="items"> -->
+                <div class="music_name">
+
+                    <h2>Love yourself</h2>
+                </div>
+                <div class="progress_bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="music-btn">
+                    <i class="fa fa-backward" style="font-size:36px;"></i>
+                    <i class="fas fa-play">
+                        <i class="fa fa-forward" style="font-size:36px;"></i>
+                    </i>
+                </div>
+                <div class="waves">
+                    <canvas id="canvas">
+                    </canvas>
+                </div>
+            <!-- </div> -->
+
+        </div>
+        <script src="particles.js"></script>
+        <script src="waves.js" async defer></script>
+</body>
+
+</html>

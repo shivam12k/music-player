@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+}
+
+.music-box {
+    margin-top: 80px;
+    height: 380px;
+    width: 300px;
+    /* overflow: hidden; */
+    border-radius: 34px;
+    background: :#dfe7ef;
+    box-shadow: -47px 47px 94px #bec4cb, 47px -47px 94px #ffffff;
+}
+
+.items {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+
+.waves {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+.album {
+    margin-top: -50px;
+    margin-left: 40px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* background: #dfe7ef; */
+    background: url('https://images.unsplash.com/photo-1518190171695-bbbb69c4a901?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+    background-repeat: no-repeat;
+    background-size: 250px 250px;
+    animation: rotate 5s linear infinite;
+    animation-play-state: paused;
+}
+
+.music_name {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.album:hover {
+    margin-left: -50px;
+    box-shadow: -50px 50px 100px #acb2b8, 50px -50px 100px #ffffff;
+}
+
+.progress_bar {
+    width: 100%;
+    height: 3%;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.progress {
+    background-color: whitesmoke;
+    height: 100%;
+    width: 30%;
+}
+
+.music-btn {
+    width: 100%;
+    height: 15%;
+    /* margin-top: px; */
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: yellow; */
+}
+
+.fa-play {
+    font-size: 40px;
+    color: #413737;
+}
+
+.fa-backward {
+    margin-right: 25px;
+    color: #413737;
+}
+
+.fa-backward:hover {
+    right: 10px;
+}
+
+.fa-forward {
+    color: #413737;
+    margin-left: 10px;
+}
+
+.fa-forward:hover {
+    left: 20px;
+}
