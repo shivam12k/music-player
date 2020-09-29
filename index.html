@@ -26,6 +26,7 @@
 
 
         <div id="particles-js">
+          <canvas class="particles-js-canvas-el" width="1362" height="946" style="width: 100%; height: 100%;"></canvas>
         </div>
         <div class="music-box">
 
@@ -55,6 +56,12 @@
         </div>
         <script src="particles.js"></script>
         <script src="waves.js" async defer></script>
+        <script>
+
+            particlesJS.load('particles-js', 'particles.json', function() {
+              console.log('callback - particles.js config loaded');
+            });
+        </script>
 </body>
 
 </html>
