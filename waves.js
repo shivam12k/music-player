@@ -1,7 +1,7 @@
 var c = document.getElementById('canvas'),
 		ctx = c.getContext('2d'),
-		cw = c.width = window.innerWidth,
-		ch = c.height = window.innerHeight,
+		cw = c.width = 300,//window.innerWidth,  //Changes it to the size of the container and not the size of the window
+		ch = c.height = 400,//window.innerHeight,
 		points = [],
 		tick = 0,
 		opt = {
@@ -38,7 +38,7 @@ var Point = function(config){
 	this.anchorY = config.y;
 	this.x = config.x;
 	this.y = config.y;
-	this.setTarget();  
+	this.setTarget();
 };
 
 
@@ -58,7 +58,7 @@ Point.prototype.update = function(){
 	var dist = Math.sqrt(dx * dx + dy * dy);
 	if(Math.abs(dist) <= 0){
 	this.setTarget();
-} else {       
+} else {
 		var t = this.tick;
 		var b = this.initialY;
 		var c = this.targetY - this.initialY;
@@ -95,7 +95,7 @@ var renderPoints = function(){
 var renderShape = function(){
 	ctx.beginPath();
 	var pointCount = points.length;
-	ctx.moveTo(points[0].x, points[0].y);	  
+	ctx.moveTo(points[0].x, points[0].y);
 	var i;
 	for (i = 0; i < pointCount - 1; i++) {
 	var c = (points[i].x + points[i + 1].x) / 2;
@@ -106,8 +106,8 @@ var renderShape = function(){
 
 	ctx.lineTo(cw + opt.range.x + opt.thickness, ch + opt.thickness);
 
-	ctx.closePath();   
-  
+	ctx.closePath();
+
 	var gradient = ctx.createLinearGradient(20,0, 220,0);
 
 	gradient.addColorStop(1, 'salmon');
@@ -117,7 +117,7 @@ var renderShape = function(){
 
   ctx.fillStyle = gradient;
 
-	ctx.fill();  
+	ctx.fill();
 
 	ctx.stroke();
 
