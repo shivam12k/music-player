@@ -76,12 +76,31 @@ canvas{
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    /* background: #dfe7ef; */
-    background: url('https://images.unsplash.com/photo-1518190171695-bbbb69c4a901?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+    background: url('https://images.unsplash.com/photo-1518190171695-bbbb69c4a901?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'); */
+    background-repeat: no-repeat;
+    background-size: 250px 250px;
+   
+}
+.loading{
+    margin-top: -50px;
+    margin-left: 40px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: url('https://images.unsplash.com/photo-1518190171695-bbbb69c4a901?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'); */
     background-repeat: no-repeat;
     background-size: 250px 250px;
     animation: rotate 5s linear infinite;
     animation-play-state: paused;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .music_name {
@@ -93,7 +112,6 @@ canvas{
 }
 
 .album:hover {
-    margin-left: -50px;
     box-shadow: -50px 50px 100px #acb2b8, 50px -50px 100px #ffffff;
 }
 
@@ -130,10 +148,33 @@ canvas{
     position: relative;
     z-index: 10;
 }
+.fa-pause{
+    font-size: 20px;
+    color: #413737;
+    margin-right: 10px;
+}
+.fa-pause:hover{
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: black;
+    padding: 10px;
+    padding-left: 13px;
+    color: whitesmoke;
+}
 
 .fa-play {
-    font-size: 40px;
+    font-size: 20px;
     color: #413737;
+    margin-right: 10px;
+}
+
+.fa-play:hover{
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: black;
+    padding: 10px;
+    padding-left: 13px;
+    color: whitesmoke;
 }
 
 .fa-backward {
@@ -142,6 +183,12 @@ canvas{
 }
 
 .fa-backward:hover {
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: black;
+    padding: 10px;
+    padding-left: 13px;
+    color: whitesmoke;
     right: 10px;
 }
 
@@ -152,4 +199,10 @@ canvas{
 
 .fa-forward:hover {
     left: 20px;
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: black;
+    padding: 10px;
+    padding-left: 13px;
+    color: whitesmoke;
 }
