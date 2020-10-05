@@ -6,7 +6,7 @@ let isplaying = false;
 const PlayMusic = () => {
     isplaying = true;
     music.play();
-    play.classList.replace('fa-play', 'fa-pause')
+    play.classList.replace('fa-play', 'fa-pause');
     img.classList.replace('album', 'loading');
 
 }
@@ -15,6 +15,7 @@ const PauseMusic = () => {
     isplaying = false;
     music.pause();
     play.classList.replace('fa-pause', 'fa-play')
+    img.classList.replace( 'loading','album');
 
 }
     //toggle

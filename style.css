@@ -5,6 +5,7 @@
 }
 
 body {
+    background-color: #ffffff;
     font-family: 'Cinzel Decorative', cursive;
 }
 
@@ -37,9 +38,15 @@ body {
     height: 380px;
     width: 300px;
     border-radius: 34px;
-    background: #dfe7ef;
-    box-shadow: -47px 47px 94px #bec4cb, 47px -47px 94px #ffffff;
+    background: #ffffff;
+    box-shadow: 43px 43px 69px #adadad, -43px -43px 69px #ffffff;
+    cursor: pointer;
 }
+.music-box:hover {
+    background: linear-gradient(145deg, #ffffff, #dddddc);
+    box-shadow: 43px 43px 69px #a7a7a6, -43px -43px 69px #ffffff;
+}
+
 
 .items {
     width: 100%;
@@ -81,6 +88,10 @@ canvas{
     background-size: 250px 250px;
    
 }
+.album:hover {
+    filter: drop-shadow(0 0 0.25rem black);
+}
+
 .loading{
     margin-top: -50px;
     margin-left: 40px;
@@ -90,8 +101,9 @@ canvas{
     background: url('https://images.unsplash.com/photo-1518190171695-bbbb69c4a901?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'); */
     background-repeat: no-repeat;
     background-size: 250px 250px;
+    filter: drop-shadow(0 0 0.75rem black);
     animation: rotate 5s linear infinite;
-    animation-play-state: paused;
+    /* animation-play-state: paused; */
 }
 
 @keyframes rotate {
@@ -111,9 +123,7 @@ canvas{
     align-items: center;
 }
 
-.album:hover {
-    box-shadow: -50px 50px 100px #acb2b8, 50px -50px 100px #ffffff;
-}
+
 
 /* Added position and z-index to be above the wave */
 .progress_bar {
