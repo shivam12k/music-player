@@ -83,7 +83,7 @@ canvas{
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: url('https://images.unsplash.com/photo-1518190171695-bbbb69c4a901?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'); */
+    /* background: url('https://images.unsplash.com/photo-1518190171695-bbbb69c4a901?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'); */ */
     background-repeat: no-repeat;
     background-size: 250px 250px;
    
@@ -188,6 +188,7 @@ canvas{
 }
 
 .fa-backward {
+    size: 10px;
     margin-right: 25px;
     color: #413737;
 }
