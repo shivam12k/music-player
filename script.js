@@ -5,9 +5,11 @@ let isplaying = false;
 let music_name = document.querySelector('#name');
 let next = document.querySelector('#next');
 let prev = document.querySelector('#prev');
+let progress = document.getElementById('progress');
+let current_time = document.getElementById('current_time');
+let Duration = document.getElementById('durations');
 //array of songs
-const songs = [
-    {
+const songs = [{
         name: "Airtel"
     },
     {
@@ -68,15 +70,32 @@ const nextSong = () => {
 
 }
 const prevSong = () => {
-    if (songIndex >= 1) {
-        songIndex--;
-        loadSong(songs[songIndex]);
-        PlayMusic();
+        if (songIndex >= 1) {
+            songIndex--;
+            loadSong(songs[songIndex]);
+            PlayMusic();
+        }
     }
-}
+    //progress bar
+music.addEventListener('timeupdate', (event) => {
+    const { currentTime, duration } = event.srcElement;
+    let progress_time = (currentTime / duration) * 100;
+    progress.style.width = `${progress_time}%`;
+
+    //time update
+    let min_duration = Math.floor(currentTime / 60);
+    let sec_duration = Math.floor(currentTime % 60);
+
+    let last_duration_min = Math.floor(duration / 60);
+    let last_duration_sec = Math.floor(duration % 60);
+
+    current_time.textContent = `${min_duration}:${sec_duration}`;
+    Duration.textContent = `${last_duration_min}:${last_duration_sec}`;
+
+
+})
+
+
+
 next.addEventListener('click', nextSong);
 prev.addEventListener('click', prevSong);
-
-
-
-

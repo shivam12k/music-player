@@ -31,7 +31,9 @@ body {
     flex-direction: column;
 }
 
+
 /* Added postion relative to give container to waves and fixed/added background color to hide particles */
+
 .music-box {
     position: relative;
     margin-top: 80px;
@@ -42,11 +44,11 @@ body {
     box-shadow: 43px 43px 69px #adadad, -43px -43px 69px #ffffff;
     cursor: pointer;
 }
+
 .music-box:hover {
     background: linear-gradient(145deg, #ffffff, #dddddc);
     box-shadow: 43px 43px 69px #a7a7a6, -43px -43px 69px #ffffff;
 }
-
 
 .items {
     width: 100%;
@@ -54,14 +56,10 @@ body {
     overflow: hidden;
 }
 
+
 /* Updated to move waved into music box, updated index to be above the card and not get covered by background color*/
+
 .waves {
-    /* width: 100%;
-    height: 20%;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: -1; */
     width: 100%;
     height: 40px;
     position: absolute;
@@ -72,9 +70,11 @@ body {
     border-radius: 34px;
 }
 
+
 /* Added to remove sqaure at bottom from canvas */
-canvas{
-  border-radius: 34px;
+
+canvas {
+    border-radius: 34px;
 }
 
 .album {
@@ -83,23 +83,20 @@ canvas{
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    /* background: url('https://images.unsplash.com/photo-1518190171695-bbbb69c4a901?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'); */ */
-    background-repeat: no-repeat;
+    /* background: url('https://images.unsplash.com/photo-1518190171695-bbbb69c4a901?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'); */
+    */ background-repeat: no-repeat;
     background-size: 250px 250px;
-   
-}
-.album:hover {
     filter: drop-shadow(0 0 0.25rem black);
 }
 
-.loading{
+.loading {
     margin-top: -50px;
     margin-left: 40px;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: url('https://images.unsplash.com/photo-1518190171695-bbbb69c4a901?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'); */
-    background-repeat: no-repeat;
+    background: url('https://images.unsplash.com/photo-1518190171695-bbbb69c4a901?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+    */ background-repeat: no-repeat;
     background-size: 250px 250px;
     filter: drop-shadow(0 0 0.75rem black);
     animation: rotate 5s linear infinite;
@@ -124,33 +121,55 @@ canvas{
 }
 
 
-
 /* Added position and z-index to be above the wave */
+
 .progress_bar {
-    width: 100%;
-    height: 3%;
+    /* width: 285px; */
+    height: 2%;
     margin-top: 100px;
     margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     display: flex;
-    justify-content: flex-end;
-    border-radius: 5px;
-    background-color: black;
+    justify-content: flex-start;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
     position: relative;
     z-index: 10;
 }
 
 .progress {
-    background-color: whitesmoke;
+    background-color: black;
+    appearance: none;
     height: 100%;
-    width: 30%;
+    width: 0%;
 }
 
+#current_time {
+    position: absolute;
+    z-index: 10;
+    bottom: 80px;
+    left: 5px;
+    font-weight: bold;
+}
+
+#durations {
+    position: relative;
+    z-index: 10;
+    float: right;
+    right: 8px;
+    bottom: -80px;
+    font-weight: bold;
+}
+
+
 /* Added position and z-index to keep above wave */
+
 .music-btn {
     width: 100%;
     height: 15%;
     /* margin-top: px; */
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -158,12 +177,14 @@ canvas{
     position: relative;
     z-index: 10;
 }
-.fa-pause{
+
+.fa-pause {
     font-size: 20px;
     color: #413737;
     margin-right: 10px;
 }
-.fa-pause:hover{
+
+.fa-pause:hover {
     border: 3px solid black;
     border-radius: 50%;
     background-color: black;
@@ -178,7 +199,7 @@ canvas{
     margin-right: 10px;
 }
 
-.fa-play:hover{
+.fa-play:hover {
     border: 3px solid black;
     border-radius: 50%;
     background-color: black;
