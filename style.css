@@ -1,0 +1,259 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* Added postion relative to give container to waves and fixed/added background color to hide particles */
+
+.music-box {
+    position: relative;
+    margin-top: 80px;
+    height: 380px;
+    width: 300px;
+    border-radius: 34px;
+    background: #ffffff;
+    box-shadow: 43px 43px 69px #adadad, -43px -43px 69px #ffffff;
+    cursor: pointer;
+}
+
+.music-box-bac {
+    position: relative;
+    margin-top: 80px;
+    height: 380px;
+    width: 300px;
+    border-radius: 34px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.items {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+
+
+/* Updated to move waved into music box, updated index to be above the card and not get covered by background color*/
+
+.waves {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    left: 0px;
+    bottom: 360px;
+    z-index: 0;
+    right: 0;
+    border-radius: 34px;
+}
+
+
+/* Added to remove sqaure at bottom from canvas */
+
+canvas {
+    border-radius: 34px;
+}
+
+.album {
+    margin-top: -50px;
+    margin-left: 40px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* background: url('https://images.unsplash.com/photo-1518190171695-bbbb69c4a901?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'); */
+    */ background-repeat: no-repeat;
+    background-size: 250px 250px;
+    filter: drop-shadow(0 0 0.25rem black);
+}
+
+.loading {
+    margin-top: -50px;
+    margin-left: 40px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: url('https://images.unsplash.com/photo-1518190171695-bbbb69c4a901?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+    */ background-repeat: no-repeat;
+    background-size: 250px 250px;
+    filter: drop-shadow(0 0 0.75rem black);
+    animation: rotate 5s linear infinite;
+    /* animation-play-state: paused; */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.music_name {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+
+/* Added position and z-index to be above the wave */
+
+.progress_bar {
+    /* width: 285px; */
+    height: 2%;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    position: relative;
+    z-index: 10;
+}
+
+.progress {
+    background-color: black;
+    appearance: none;
+    height: 100%;
+    width: 0%;
+}
+
+#current_time {
+    position: absolute;
+    z-index: 10;
+    bottom: 90px;
+    left: 5px;
+    font-weight: bold;
+}
+
+#durations {
+    position: relative;
+    z-index: 10;
+    float: right;
+    right: 8px;
+    bottom: -80px;
+    font-weight: bold;
+}
+
+
+/* Added position and z-index to keep above wave */
+
+.music-btn {
+    width: 100%;
+    height: 15%;
+    /* margin-top: px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: yellow; */
+    position: relative;
+    z-index: 10;
+}
+
+.fa-pause {
+    font-size: 20px;
+    color: #413737;
+    margin-right: 10px;
+}
+
+.fa-pause:hover {
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: black;
+    padding: 10px;
+    padding-left: 13px;
+    color: whitesmoke;
+}
+
+.fa-play {
+    font-size: 20px;
+    color: #413737;
+    margin-right: 10px;
+}
+
+.fa-play:hover {
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: black;
+    padding: 10px;
+    padding-left: 13px;
+    color: whitesmoke;
+}
+
+.fa-backward {
+    size: 10px;
+    margin-right: 25px;
+    color: #413737;
+}
+
+.fa-backward:hover {
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: black;
+    padding: 10px;
+    padding-left: 13px;
+    color: whitesmoke;
+    right: 10px;
+}
+
+.fa-forward {
+    color: #413737;
+    margin-left: 10px;
+}
+
+.fa-forward:hover {
+    left: 20px;
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: black;
+    padding: 10px;
+    padding-left: 13px;
+    color: whitesmoke;
+}
+
+.bac-color {
+    margin-bottom: -30px;
+    display: flex;
+    justify-content: center;
+}
+
+.color {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}

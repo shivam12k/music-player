@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Music player</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="waves.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/0774f60bd6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="hint.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+
+</head>
+
+<body id="gradient">
+
+    <div class="wrapper">
+
+        <div id="particles-js">
+            <canvas class="particles-js-canvas-el" width="1362" height="946" style="width: 100%; height: 100%;"></canvas>
+        </div>
+
+        <!-- Music player -->
+
+        <div class="music-box ">
+            <!-- album -->
+            <div>
+                <img class="album">
+            </div>
+
+
+
+            <!-- music name -->
+            <div class="music_name">
+                <h2 id="name"></h2>
+            </div>
+            <div class="bac-color ">
+                <!-- <input type="color " name="color1 " class="color1 color " value="#a64dff "> -->
+                <input type="color" name="color1" class="color1 color" value="#ff704d">
+                <input type="color" name="color2" class="color2 color " value="#ffff1a">
+            </div>
+
+            <!-- prograssive bar -->
+
+            <div id="current_time">0:00</div>
+            <div id="durations">2:12</div>
+
+            <div class="progress_bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <audio></audio>
+
+            <!-- controls -->
+            <div class="music-btn">
+                <i class="fa fa-backward" id="prev" style="font-size:20px;"></i>
+                <i class="fas fa-play " id="play"> </i>
+                <i class="fa fa-forward" id="next" style="font-size:20px;"></i>
+            </div>
+
+            <!-- Waves -->
+            <div class="waves">
+                <canvas id="canvas">
+                </canvas>
+            </div>
+
+        </div>
+        <script src="script.js"></script>
+        <script src="BackgroundGenrator.js "></script>
+        <script src="particles.js"></script>
+        <script src="waves.js" async defer></script>
+        <script>
+            particlesJS.load('particles-js', 'particles.json', function() {
+                console.log('callback - particles.js config loaded');
+            });
+        </script>
+</body>
+
+</html>
