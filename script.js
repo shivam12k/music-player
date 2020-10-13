@@ -10,13 +10,13 @@ let current_time = document.getElementById('current_time');
 let Duration = document.getElementById('durations');
 //array of songs
 const songs = [{
-        name: "Airtel"
+        name: "It's CSS style"
     },
     {
-        name: "I Like How It Feels"
+        name: "Code Anthem"
     },
     {
-        name: "Tumko To Aana Hi Tha"
+        name: "The Java Life"
     },
 
 ]

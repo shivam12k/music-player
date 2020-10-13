@@ -45,9 +45,14 @@ body {
     cursor: pointer;
 }
 
-.music-box:hover {
-    background: linear-gradient(145deg, #ffffff, #dddddc);
-    box-shadow: 43px 43px 69px #a7a7a6, -43px -43px 69px #ffffff;
+.music-box-bac {
+    position: relative;
+    margin-top: 80px;
+    height: 380px;
+    width: 300px;
+    border-radius: 34px;
+    background: #ffffff;
+    cursor: pointer;
 }
 
 .items {
@@ -118,6 +123,7 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
 }
 
 
@@ -149,7 +155,7 @@ canvas {
 #current_time {
     position: absolute;
     z-index: 10;
-    bottom: 80px;
+    bottom: 90px;
     left: 5px;
     font-weight: bold;
 }
@@ -239,11 +245,15 @@ canvas {
     color: whitesmoke;
 }
 
-.dark {
-    float: right;
-    margin-right: 10px;
-    margin-top: -130px;
-    opacity: 0.5;
-    z-index: 10;
-    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+.bac-color {
+    margin-bottom: -30px;
+    display: flex;
+    justify-content: center;
+}
+
+.color {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
 }
